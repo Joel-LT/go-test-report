@@ -282,6 +282,7 @@ func getAllDetails(listFile string) (testFileDetailsByPackage, error) {
 		}
 		testFileDetailByPackage[packageName] = testFileDetailsByTest
 	}
+	fmt.print(testFileDetailByPackage)
 	return testFileDetailByPackage, nil
 }
 
