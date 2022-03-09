@@ -106,6 +106,7 @@ type (
 )
 
 func main() {
+	fmt.Println("+++++++++++++++++++++++")
 	rootCmd, _, _ := initRootCommand()
 	if err := rootCmd.Execute(); err != nil {
 		os.Exit(1)
@@ -113,6 +114,7 @@ func main() {
 }
 
 func initRootCommand() (*cobra.Command, *templateData, *cmdFlags) {
+	fmt.Println("+++++++++++++++++++++++")
 	flags := &cmdFlags{}
 	tmplData := &templateData{}
 	rootCmd := &cobra.Command{
@@ -282,7 +284,7 @@ func getAllDetails(listFile string) (testFileDetailsByPackage, error) {
 		}
 		testFileDetailByPackage[packageName] = testFileDetailsByTest
 	}
-	fmt.print(testFileDetailByPackage)
+	fmt.Print(testFileDetailByPackage)
 	return testFileDetailByPackage, nil
 }
 
